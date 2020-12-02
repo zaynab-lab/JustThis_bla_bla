@@ -14,7 +14,7 @@ export default function Menu() {
 
   useEffect(() => {
     axios
-      .get("/authentication")
+      .get(`https://localhost:3000/authentication`)
       .then((res) => {
         const { data } = res;
         if (data !== "noToken" && data !== "invalid") {

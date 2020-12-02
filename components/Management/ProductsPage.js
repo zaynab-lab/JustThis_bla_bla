@@ -9,13 +9,13 @@ export default function ProductsPage() {
   const [roles, setRoles] = useState("");
   const [productList, setProductsList] = useState([]);
   useEffect(() => {
-    axios.get(`/authentication`).then((res) => {
+    axios.get(`https://localhost:3000/authentication`).then((res) => {
       const { data } = res;
       if (data !== "noToken" && data !== "invalid") {
         setRoles(data.roles);
       }
     });
-    axios.get(`https//localhost:3000/getProductList`).then((res) => {
+    axios.get(`https://localhost:3000/getProductList`).then((res) => {
       const { data } = res;
       setProductsList(data);
     });

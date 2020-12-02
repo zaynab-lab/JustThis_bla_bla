@@ -8,7 +8,7 @@ import axios from "axios";
 export default function Proceed() {
   const [route, setRoute] = useState(true);
   useEffect(() => {
-    axios.get("/authentication").then((res) => {
+    axios.get(`https://localhost:3000/authentication`).then((res) => {
       if (res.data === "noToken" || res.data === "invalid") {
         Router.push("/Login");
       } else {
