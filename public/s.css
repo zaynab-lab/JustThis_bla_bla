@@ -1,0 +1,10 @@
+div {
+  position: -webkit-sticky;
+  justify-content: space-evenly;
+  touch-action: "pan-down";
+  position: absolute;
+  color:rgba(red, green, blue, 30);
+  opacity: 0;
+text-decoration: none  
+}
+div::placeholder
