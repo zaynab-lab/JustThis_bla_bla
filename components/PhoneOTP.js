@@ -35,7 +35,7 @@ export default function PhoneOTP() {
     waiting
       ? axios
           .post(
-            `https://localhost:3000/Login`,
+            "/Login",
             { phoneNumber, oTP },
             { "content-type": "application/json" }
           )
@@ -48,7 +48,7 @@ export default function PhoneOTP() {
           })
       : axios
           .post(
-            `https://localhost:3000/Sign`,
+            "/Sign",
             { phoneNumber },
             { "content-type": "application/json" }
           )

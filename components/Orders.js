@@ -9,7 +9,7 @@ export default function Orders() {
   const [inProgress, setInProgress] = useState(true);
 
   useEffect(() => {
-    axios.get(`https://localhost:3000/authentication`).then((res) => {
+    axios.get("/authentication").then((res) => {
       if (res.data !== "noToken" && res.data !== "invalid") {
         setUser(true);
       }

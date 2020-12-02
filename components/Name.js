@@ -19,7 +19,7 @@ export default function Name() {
   const handleClick = () => {
     axios
       .post(
-        `https://localhost:3000/SetName`,
+        "/SetName",
         { phoneNumber, name },
         { "content-type": "application/json" }
       )
