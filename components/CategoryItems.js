@@ -23,7 +23,7 @@ const Cover = ({ name }) => {
 const CataItem = ({ title, name }) => {
   return (
     <>
-      <Link href={`https//localhost:3000/${name}`}>
+      <Link href={`/${name}`}>
         <div className="container">
           <div className="icon">
             <Cover name={name} />
