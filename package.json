@@ -1,5 +1,6 @@
 {
-  "name": "nextjs",
+  "name": "Za-Market",
+  "homepage": "https://www.za-market.com/",
   "version": "1.0.0",
   "scripts": {
     "dev": "node server.js",
@@ -28,8 +29,6 @@
     "recoil": "0.1.2"
   },
   "license": "MIT",
-  "keywords": [
-    "next"
-  ],
+  "keywords": ["next"],
   "description": "A \"Hello World\" application with multiple pages that shows how Next.js routing works."
 }
