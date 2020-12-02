@@ -54,7 +54,7 @@ const CataItem = ({ title, name }) => {
 export default function CatagoryItems() {
   const [categoryList, setCategoryList] = useState(items);
   useEffect(() => {
-    axios.get("/getCategory").then((res) => {
+    axios.get(`/getCategory`).then((res) => {
       const { data } = res;
       data && setCategoryList(data);
     });
