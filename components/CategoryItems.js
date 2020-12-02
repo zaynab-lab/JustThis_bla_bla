@@ -23,7 +23,7 @@ const Cover = ({ name }) => {
 const CataItem = ({ title, name }) => {
   return (
     <>
-      <Link href={`/${name}`}>
+      <Link href={`https//localhost:3000/${name}`}>
         <div className="container">
           <div className="icon">
             <Cover name={name} />
@@ -54,9 +54,8 @@ const CataItem = ({ title, name }) => {
 export default function CatagoryItems() {
   const [categoryList, setCategoryList] = useState(items);
   useEffect(() => {
-    axios.get("/getCategory").then((res) => {
+    axios.get(`https//localhost:3000/getCategory`).then((res) => {
       const { data } = res;
-
       data && setCategoryList(data);
     });
   }, [setCategoryList]);
