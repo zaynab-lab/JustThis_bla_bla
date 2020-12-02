@@ -19,13 +19,13 @@ export default function ProductsPage() {
   };
 
   useEffect(() => {
-    axios.get(`https://localhost:3000/authentication`).then((res) => {
+    axios.get("/authentication").then((res) => {
       const { data } = res;
       if (data !== "noToken" && data !== "invalid") {
         setRoles(data.roles);
       }
     });
-    axios.get(`https://localhost:3000/getCategory`).then((res) => {
+    axios.get("/getCategory").then((res) => {
       const { data } = res;
       data && setCategoryList(data);
     });
@@ -57,7 +57,7 @@ export default function ProductsPage() {
                   state.title !== "" && state.name !== ""
                     ? axios
                         .post(
-                          `https://localhost:3000/createCategory`,
+                          `/createCategory`,
                           { name: state.name, title: state.title },
                           { "content-type": "application/json" }
                         )
@@ -80,9 +80,7 @@ export default function ProductsPage() {
               onChange={(e) => {
                 setState({ ...state, category: e.target.value });
                 axios
-                  .get(
-                    `https://localhost:3000/getSubCategory/${e.target.value}`
-                  )
+                  .get(`/getSubCategory/${e.target.value}`)
                   .then((res) => setSubCategoryList(res.data));
               }}
             >
@@ -117,7 +115,7 @@ export default function ProductsPage() {
                   state.category !== "" && state.subCategory !== ""
                     ? axios
                         .post(
-                          `https://localhost:3000/addSubCategory`,
+                          "/addSubCategory",
                           {
                             category: state.category,
                             subCategory: state.subCategory

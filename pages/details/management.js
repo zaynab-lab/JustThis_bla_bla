@@ -13,7 +13,7 @@ export default function Conditions() {
 
   useEffect(() => {
     axios
-      .get(`https://localhost:3000/authentication`)
+      .get("/authentication")
       .then((res) => {
         const { data } = res;
         if (data !== "noToken" && data !== "invalid") {

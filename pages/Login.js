@@ -17,7 +17,7 @@ export default function Login() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`/authentication`).then((res) => {
+    axios.get("/authentication").then((res) => {
       const { data } = res;
       if (data !== "noToken" && data !== "invalid") {
         Router.push("/");

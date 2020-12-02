@@ -38,7 +38,7 @@ export default function Profile() {
 
   useEffect(() => {
     axios
-      .get(`https://localhost:3000/authentication`)
+      .get("/authentication")
       .then((res) => {
         const { data } = res;
         if (data !== "noToken" && data !== "invalid") {
@@ -120,7 +120,7 @@ export default function Profile() {
               className="Logout"
               onClick={() => {
                 axios
-                  .post(`https://localhost:3000/Logout`)
+                  .post("/Logout")
                   .then(
                     (res) =>
                       res.data === "done" &&

@@ -5,7 +5,7 @@ import { styles } from "../../../public/js/styles";
 export default function CategoryList() {
   const [categoryList, setCategoryList] = useState([]);
   useEffect(() => {
-    axios.get(`https://localhost:3000/getCategory`).then((res) => {
+    axios.get("/getCategory").then((res) => {
       const { data } = res;
       setCategoryList(data);
     });
