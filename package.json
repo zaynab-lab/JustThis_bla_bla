@@ -1,5 +1,6 @@
 {
   "name": "Za-Market",
+  "homepage": "https://www.za-market.com",
   "version": "1.0.0",
   "scripts": {
     "dev": "node server.js",
